@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard p5.js - Website Otimizado</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.6.0/p5.min.js"></script>
+</head>
+<body>
+    <!-- HEADER -->
+    <header class="header">
+        <div class="header-container">
+            <div class="logo">
+                <h1>p5.js Dashboard</h1>
+            </div>
+            <nav class="navbar">
+                <ul class="nav-menu">
+                    <li><a href="#home" class="nav-link active" data-page="home">Home</a></li>
+                    <li><a href="#dashboard" class="nav-link" data-page="dashboard">Dashboard</a></li>
+                    <li><a href="#itens" class="nav-link" data-page="itens">Itens</a></li>
+                    <li><a href="#contato" class="nav-link" data-page="contato">Contato</a></li>
+                </ul>
+            </nav>
+            <div class="menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </header>
+
+    <!-- MAIN CONTENT -->
+    <main class="main-content">
+        <!-- HOME PAGE -->
+        <section id="home" class="page active">
+            <div class="page-container">
+                <h2>Bem-vindo ao Dashboard</h2>
+                <p>Este é um website otimizado construído com HTML, JavaScript e p5.js</p>
+                <div id="p5-container-home" class="p5-container"></div>
+                <button class="btn btn-primary" onclick="changePage('dashboard')">Ir para Dashboard</button>
+            </div>
+        </section>
+
+        <!-- DASHBOARD PAGE -->
+        <section id="dashboard" class="page">
+            <div class="page-container">
+                <h2>Dashboard</h2>
+                <div class="dashboard-grid">
+                    <div class="card">
+                        <h3>Visualização p5.js</h3>
+                        <div id="p5-container-dash" class="p5-container"></div>
+                    </div>
+                    <div class="card">
+                        <h3>Estatísticas</h3>
+                        <div class="stats">
+                            <div class="stat-item">
+                                <span class="stat-label">Usuários</span>
+                                <span class="stat-value">1,234</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-label">Visualizações</span>
+                                <span class="stat-value">5,678</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-label">Conversão</span>
+                                <span class="stat-value">42%</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ITENS PAGE -->
+        <section id="itens" class="page">
+            <div class="page-container">
+                <h2>Itens</h2>
+                <div class="itens-grid" id="itensGrid">
+                    <div class="item-card">
+                        <div class="item-header">Item 1</div>
+                        <div class="item-body">
+                            <p>Descrição do item 1</p>
+                            <button class="btn btn-small">Detalhes</button>
+                        </div>
+                    </div>
+                    <div class="item-card">
+                        <div class="item-header">Item 2</div>
+                        <div class="item-body">
+                            <p>Descrição do item 2</p>
+                            <button class="btn btn-small">Detalhes</button>
+                        </div>
+                    </div>
+                    <div class="item-card">
+                        <div class="item-header">Item 3</div>
+                        <div class="item-body">
+                            <p>Descrição do item 3</p>
+                            <button class="btn btn-small">Detalhes</button>
+                        </div>
+                    </div>
+                    <div class="item-card">
+                        <div class="item-header">Item 4</div>
+                        <div class="item-body">
+                            <p>Descrição do item 4</p>
+                            <button class="btn btn-small">Detalhes</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CONTATO PAGE -->
+        <section id="contato" class="page">
+            <div class="page-container">
+                <h2>Contato</h2>
+                <form class="contact-form" id="contactForm">
+                    <div class="form-group">
+                        <label for="name">Nome</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">E-mail</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Mensagem</label>
+                        <textarea id="message" name="message" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Enviar</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-section">
+                <h4>Sobre</h4>
+                <p>Website otimizado com p5.js, HTML e JavaScript</p>
+            </div>
+            <div class="footer-section">
+                <h4>Links Rápidos</h4>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#dashboard">Dashboard</a></li>
+                    <li><a href="#itens">Itens</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Contato</h4>
+                <p>Email: contato@example.com</p>
+                <p>Telefone: (11) 1234-5678</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Dashboard p5.js. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/p5-sketches.js"></script>
+</body>
+</html>
